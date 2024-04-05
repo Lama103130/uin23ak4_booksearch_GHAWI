@@ -13,14 +13,14 @@ const BookCard = ({ book }) => {
     openLibraryIds,
   } = book;
 
-  // Generer URL for bokomslag
+  // bokomslag
   const coverUrl = cover_i
     ? `https://covers.openlibrary.org/b/id/${cover_i}-M.jpg`
     : isbn
       ? `https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg`
-      : 'assets/images/no-cover.jpg'; // Angi en sti til et standardbilde for bøker uten omslag
+      : ''; 
 
-  // Generer URL for kjøp på Amazon
+  // kjøp på Amazon
   
   const purchaseUrl =
   (openLibraryIds && openLibraryIds.length > 0 && `https://openlibrary.org${openLibraryIds[0]}`) ||
